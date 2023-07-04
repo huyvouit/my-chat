@@ -1,0 +1,22 @@
+@import '/styles/css/variables.scss';
+
+.notification {
+  &__dropdown-overlay {
+    width: 400px;
+    left: calc(100vw - 420px) !important;
+    top: 60px !important;
+
+    @media screen and (max-width: $md) {
+      width: 100vw;
+      left: 0 !important;
+    }
+
+    [class*="ant-dropdown-menu-item"] {
+      background-color: white !important;
+
+      &:hover {
+        background-color: white !important;
+      }
+    }
+  }
+}

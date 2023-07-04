@@ -1,0 +1,30 @@
+@import '/styles/css/variables.scss';
+
+.signup {
+  min-height: 100vh;
+  display: flex;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  &__form {
+    width: 100%;
+    transition: all .3s;
+
+    @media screen and (max-width: $md) {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    width: 50%;
+    background-color: $primary-color;
+
+    @media screen and (max-width: $md) {
+      display: none;
+    }
+  }
+}

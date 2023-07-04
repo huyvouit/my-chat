@@ -1,0 +1,33 @@
+@import '/styles/css/variables.scss';
+
+.loading {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  background-color: $white-color;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__container {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-top: 0.625rem;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}

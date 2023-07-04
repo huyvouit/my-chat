@@ -1,0 +1,22 @@
+@import '/styles/css/variables.scss';
+
+.chosen-user-item {
+  &__container {
+    position: relative;
+  }
+
+  &__action {
+    position: absolute;
+    top: 0;
+    right: -4px;
+  }
+
+  &__btn-remove {
+    color: $hover-info-color;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,19 @@
+@import '/styles/css/variables.scss';
+
+.my-button {
+  border-radius: $border-radius !important;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &--max-width {
+    width: 100%;
+  }
+
+  &--bg-white {
+    background-color: $white-color !important;
+  }
+
+  &--no-padding {
+    padding: 0px;
+  }
+}

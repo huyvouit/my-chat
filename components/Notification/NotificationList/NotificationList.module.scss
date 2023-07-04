@@ -1,0 +1,80 @@
+@import '/styles/css/variables.scss';
+
+.notification-list {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: white;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  max-height: calc(100vh - 90px);
+  width: 365px;
+  transform: all .3s;
+  cursor: auto;
+
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: $dark-gray-color-2;
+
+    span {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  &__read-all-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 10px 0;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 10px 0;
+
+    span {
+      font-size: 12px;
+      color: $dark-gray-color-2;
+    }
+  }
+
+  &__scroll {
+    height: 100%;
+  }
+
+  &__skeleton {
+    height: 60px;
+    padding: 20px 15px;
+  }
+
+  [class*="ant-list-items"] {
+    display: flex;
+    flex-direction: column;
+  }
+}

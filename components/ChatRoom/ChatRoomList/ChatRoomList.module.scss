@@ -1,0 +1,46 @@
+@import '/styles/css/variables.scss';
+
+.chat-room-list {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: white;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  // height: calc(100vh - #{$header-height} - 32px);
+  height: calc(100vh - 90px);
+  // border-top: 1px solid $line-color;
+  transform: all .3s;
+
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  &__title {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: $dark-gray-color-2;
+
+    span {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+  &__scroll {
+    height: 100%;
+  }
+
+  &__item {
+    &--focus {
+      background-color: $light-primary-color;
+    }
+  }
+
+  &__skeleton {
+    height: 60px;
+    padding: 20px 15px;
+  }
+}

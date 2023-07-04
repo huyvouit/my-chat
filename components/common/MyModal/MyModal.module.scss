@@ -1,0 +1,16 @@
+@import '/styles/css/variables.scss';
+
+.my-modal {
+  // [class="ant-modal-header"] {
+  //   padding: 16px 24px;
+  //   border-bottom: 1px solid #f0f0f0;
+  // }
+
+  // [class="ant-modal-footer"] {
+  //   padding: 10px 16px;
+  //   border-top: 1px solid #f0f0f0;
+  // }
+  [class="ant-modal-body"] {
+    padding: 16px 0;
+  }
+}

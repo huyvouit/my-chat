@@ -1,0 +1,13 @@
+@import '/styles/css/variables.scss';
+
+.chat-room {
+  height: 100%;
+
+  @media screen and (max-width: $md) {
+    width: 100%;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+.chat-room-info-modal {
+  [class*="ant-modal-body"] {
+    max-height: calc(100vh - 300px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
+    }
+  }
+
+  &__container {
+    height: auto;
+  }
+}

@@ -1,0 +1,74 @@
+@import '/styles/css/variables.scss';
+
+.notification-item {
+  border: none;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    border-radius: $border-radius;
+    background-color: #fafafa;
+
+    .notification-item__actions {
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      transform: translate(0, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: $light-gray-color-2;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  &__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+  }
+
+  &__status {
+    padding-left: 8px;
+
+    [class*="ant-badge-status-dot"] {
+      width: 10px !important;
+      height: 10px !important;
+    }
+  }
+
+  &__actions {
+    display: none;
+  }
+
+  &__ago {
+    font-size: 12px;
+    color: $dark-gray-color-2;
+
+    &--unread {
+      font-weight: 500;
+      color: $primary-color;
+    }
+  }
+}

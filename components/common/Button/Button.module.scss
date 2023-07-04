@@ -1,0 +1,334 @@
+@import "/styles/css/variables.scss";
+
+.button {
+  border-radius: 25px;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  outline: none;
+  min-height: 2.75rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  transition: all .3s;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  height: fit-content;
+
+  &--min-radius {
+    border-radius: 5px;
+  }
+
+  &--small {
+    min-height: 2rem;
+    height: 2rem;
+    padding: 0rem 0.625rem;
+    font-size: 0.813rem;
+  }
+
+  &--no-style {
+    padding: 0rem;
+    margin: 0rem;
+    background-color: transparent;
+    box-shadow: none;
+
+    &:hover {
+      background-color: $light-gray-color-11;
+    }
+  }
+
+  &--no-border {
+    border-radius: 0;
+  }
+
+  &--max-width {
+    width: 100%;
+  }
+
+  &--fit-height {
+    min-height: fit-content;
+  }
+
+  &--no-animation {
+    transition: none;
+  }
+
+  @media screen and (max-width: $sm) {
+    padding: 0rem 0.75rem;
+  }
+
+  &--primary {
+    background-color: $primary-color;
+    color: $white-color;
+    border-color: $primary-color;
+
+    &:hover {
+      background-color: $hover-primary-color;
+      color: $white-color;
+      border-color: $hover-primary-color;
+    }
+  }
+  
+  &--secondary {
+    background-color: $secondary-color;
+    color: $white-color;
+    border-color: $secondary-color;
+
+    &:hover {
+      background-color: $hover-secondary-color;
+      color: $white-color;
+      border-color: $hover-secondary-color;
+    }
+  }
+
+  &--success {
+    background-color: $success-color;
+    color: $white-color;
+    border-color: $success-color;
+
+    &:hover {
+      background-color: $hover-success-color;
+      color: $white-color;
+      border: $hover-success-color;
+    }
+  }
+
+  &--info {
+    background-color: $info-color;
+    color: $white-color;
+    border-color: $info-color;
+
+    &:hover {
+      background-color: $hover-info-color;
+      color: $white-color;
+      border-color: $hover-info-color;
+    }
+  }
+
+  &--warning {
+    background-color: $warning-color;
+    color: $white-color;
+    border-color: $warning-color;
+
+    &:hover {
+      background-color: $hover-warning-color;
+      color: $white-color;
+      border-color: $hover-warning-color;
+    }
+  }
+
+  &--danger {
+    background-color: $danger-color;
+    color: $white-color;
+    border-color: $danger-color;
+
+    &:hover {
+      background-color: $hover-danger-color;
+      color: $white-color;
+      border: $hover-danger-color;
+    }
+  }
+
+  &--light {
+    background-color: $light-color;
+    color: $dark-color;
+    border-color: $light-color;
+
+    &:hover {
+      background-color: $hover-light-color;
+      color: $dark-color;
+      border: $hover-light-color;
+    }
+  }
+
+  &--dark {
+    background-color: $dark-color;
+    color: $white-color;
+    border-color: $dark-color;
+
+    &:hover {
+      background-color: $hover-dark-color;
+      color: $white-color;
+      border: $hover-dark-color;
+    }
+  }
+
+  &--white {
+    background-color: $white-color;
+    color: $dark-color;
+    border-color: $white-color;
+
+    &:hover {
+      background-color: $hover-light-color;
+      color: $dark-color;
+      border: $hover-light-color;
+    }
+  }
+
+  &--outline-primary {
+    background-color: $white-color;
+    color: $primary-color;
+    border-color: $primary-color;
+    border: 1px solid;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white-color;
+      border-color: $primary-color;
+    }
+  }
+
+  &--outline-secondary {
+    background-color: $white-color;
+    color: $secondary-color;
+    border-color: $secondary-color;
+    border: 1px solid;
+
+    &:hover {
+      background-color: $secondary-color;
+      color: $white-color;
+      border-color: $secondary-color;
+    }
+  }
+
+  &--outline-info {
+    background-color: $white-color;
+    color: $info-color;
+    border-color: $info-color;
+    border: 1px solid;
+
+    &:hover {
+      background-color: $info-color;
+      color: $dark-color;
+      border-color: $info-color;
+    }
+  }
+
+  &--outline-success {
+    background-color: $white-color;
+    color: $success-color;
+    border-color: $success-color;
+    border: 1px solid;
+
+    &:hover {
+      background-color: $success-color;
+      color: $white-color;
+      border-color: $success-color;
+    }
+  }
+
+  &--outline-warning {
+    background-color: $white-color;
+    color: $warning-color;
+    border-color: $warning-color;
+    border: 1px solid;
+
+    &:hover {
+      background-color: $warning-color;
+      color: $dark-color;
+      border-color: $warning-color;
+    }
+  }
+
+  &--outline-danger {
+    background-color: $white-color;
+    color: $danger-color;
+    border-color: $danger-color;
+    border: 1px solid;
+
+    &:hover {
+      background-color: $danger-color;
+      color: $white-color;
+      border-color: $danger-color;
+    }
+  }
+
+  &--outline-light {
+    background-color: $white-color;
+    color: $dark-color;
+    border-color: $light-color;
+    border: 1px solid $light-color;
+
+    &:hover {
+      background-color: $light-color;
+      color: $dark-color;
+      border-color: $light-color;
+      border: 1px solid $dark-color;
+    }
+  }
+
+  &--outline-dark {
+    background-color: $white-color;
+    color: $dark-color;
+    border-color: $dark-color;
+    border: 1px solid;
+
+    &:hover {
+      background-color: $dark-color;
+      color: $white-color;
+      border-color: $dark-color;
+    }
+  }
+
+  &--dashed-primary {
+    background-color: $white-color;
+    color: $primary-color;
+    border: 1px dashed $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white-color;
+      border: 1px solid $primary-color;
+    }
+  }
+
+  &--disabled {
+    background-color: $light-gray-color-13 !important;
+    color: $white-color !important;
+    border: 1px solid $light-gray-color-13;
+
+    &:hover {
+      background-color: $light-gray-color-13;
+      color: $white-color;
+      border: 1px solid $light-gray-color-13;
+    }
+  }
+  
+  &--dashed {
+    border-style: dashed;
+  }
+
+  &__link {
+    text-decoration: none;
+    padding: 0rem !important;
+    background: transparent !important;
+    width: fit-content;
+
+    &--max-width {
+      width: 100%;
+    }
+  }
+
+  &__children {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    gap: 0.625rem;
+    flex-direction: row;
+    text-decoration: none !important;
+
+    &--left {
+      margin: auto auto auto 0.625rem;
+    }
+
+    &--right {
+      margin: auto 0.625rem auto auto;
+    }
+  }
+
+  &__spinner {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}

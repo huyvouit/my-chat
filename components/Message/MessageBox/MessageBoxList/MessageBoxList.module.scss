@@ -1,0 +1,88 @@
+@import '/styles/css/variables.scss';
+
+.message-box-list {
+  height: 100%;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0px 20px 0px 20px;
+  background-color: #fff;
+  position: relative;
+
+  @media screen and (max-width: $md) {
+    padding: 10px 15px 5px 15px;
+  }
+
+  &__container {
+    height: 100%;
+    width: 100%;
+    display: flex !important;
+    overflow: auto !important;
+    flex-direction: column-reverse;
+    -ms-overflow-style: none !important;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none !important;
+    /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none !important;
+      /* Safari and Chrome */
+    }
+  }
+
+  &__scroll {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    overflow-y: hidden !important;
+    height: 100% !important;
+  }
+
+  &__date-split {
+    width: 100%;
+    text-align: center;
+
+    span {
+      font-size: 11px;
+    }
+  }
+
+  &__loading-box {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  &__view {
+    [class*="ant-list-items"] {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 5px;
+    left: calc(50% - 20px);
+    cursor: pointer;
+    z-index: 101;
+    display: none;
+
+    &-scroll {
+      box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px !important;
+      padding: 0px !important;
+      border-radius: 100% !important;
+      width: 40px !important;
+      height: 40px !important;
+      color: white !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: #efefef !important;
+      }
+    }
+
+  }
+}

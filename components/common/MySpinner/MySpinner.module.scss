@@ -1,0 +1,38 @@
+@import '/styles/css/variables.scss';
+
+.my-spinner {
+  height: 100%;
+  width: 100%;
+
+  &--fit-content {
+    height: fit-content;
+  }
+
+  &__container {
+    position: relative;
+    height: 100%;
+  }
+
+  &__spin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color: $white-color, $alpha: .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    border-radius: $border-radius;
+
+    &--top {
+      display: block;
+      text-align: center;
+
+      .icon {
+        margin-top: 10%;
+      }
+    }
+  }
+}

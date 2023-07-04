@@ -1,0 +1,52 @@
+@import '/styles/css/variables.scss';
+
+.message-box-search-list {
+  padding-top: 10px;
+  background-color: white;
+  height: 100vh;
+  transform: all .3s;
+
+  @media screen and (max-width: $md) {
+    padding: 0;
+    height: 250px;
+  }
+
+  &__title {
+    color: $dark-color;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+
+    span {
+      display: block;
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+
+  &__scroll {
+    height: calc(100vh - 160px) !important;
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    @media screen and (max-width: $md) {
+      height: 200px !important;
+      box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &-list {
+      height: 100%;
+    }
+  }
+
+  &__skeleton {
+    height: 60px;
+    padding: 20px 15px;
+  }
+}

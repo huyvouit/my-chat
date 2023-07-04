@@ -1,0 +1,118 @@
+@import '/styles/css/variables.scss';
+
+.message-box-header {
+  display: block;
+
+  &__container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white-color;
+    padding: 15px 15px 10px 15px;
+    border-bottom: 1px solid #ddd;
+
+    @media screen and (max-width: $md) {
+      padding: 10px 15px;
+    }
+  }
+
+  &__info {
+    width: 70%;
+
+    &-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 16px;
+
+      &:hover {
+        .message-box-header__info-group-title {
+          &--editable {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            cursor: pointer;
+            padding: 5px;
+
+            &:hover {
+
+              border-radius: 100rem;
+              background-color: #ddd;
+            }
+          }
+        }
+      }
+
+      &-avt {
+        flex: 0 0 40px;
+        width: 40px;
+        height: 40px;
+        background-color: #ddd;
+        border-radius: 100rem;
+
+        @media screen and (max-width: $sm) {
+          display: none;
+        }
+      }
+
+      &-title {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-weight: bold;
+        gap: 4px;
+        width: 100%;
+
+        &-text {
+          max-width: 80%;
+
+        }
+
+        &--editable {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    width: 30%;
+
+    &-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0px;
+
+      &-search,
+      &-option {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        // padding: 5px;
+        width: 32px;
+        height: 32px;
+
+        &:hover {
+          background-color: #ddd;
+          border-radius: 100rem;
+        }
+      }
+    }
+  }
+
+  &__back {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 12px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,19 @@
+.message-box-media {
+  position: absolute;
+  top: 8px;
+  right: 50px;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+
+    &:hover {
+      border-radius: 100rem;
+      background-color: #ddd;
+    }
+  }
+}

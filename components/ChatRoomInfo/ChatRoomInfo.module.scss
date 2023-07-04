@@ -1,0 +1,23 @@
+@import '/styles/css/variables.scss';
+
+.chat-room-info {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100vh - 80px);
+  
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

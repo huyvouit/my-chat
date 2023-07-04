@@ -1,0 +1,57 @@
+@import '/styles/css/variables.scss';
+
+.message-box-remove {
+
+  &__container {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+
+
+    [class*="ant-radio-group"] {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__option {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+
+    & [class*="ant-radio-wrapper"],
+    & [class*="ant-radio-wrapper ant-radio-wrapper-checked"] {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin: 0
+    }
+
+    [class*="span.ant-radio"] {
+      padding-inline-end: 0;
+    }
+
+    &-text {
+      font-size: 16px;
+      color: $dark-color;
+      font-weight: 600;
+
+      &--sub {
+        display: block;
+        font-size: 14px;
+        color: $light-gray-color-3;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

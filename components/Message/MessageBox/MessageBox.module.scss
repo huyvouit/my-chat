@@ -1,0 +1,25 @@
+@import '/styles/css/variables.scss';
+
+.message-box {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    background-color: $white-color;
+    height: calc(100vh - #{$header-height});
+
+    @media screen and (max-width: $md) {
+      height: 100vh;
+    }
+  }
+
+  &__input {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    &-element {
+      &>[class*="ant-comment-inner"] {
+        padding: 5px 0px 10px 0px !important;
+      }
+    }
+  }
+}

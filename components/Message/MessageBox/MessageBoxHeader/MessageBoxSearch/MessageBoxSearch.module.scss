@@ -1,0 +1,84 @@
+@import '/styles/css/variables.scss';
+
+.message-box-search {
+  background-color: red;
+
+  &__container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $white-color;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    gap: 8px;
+  }
+
+  &__input {
+    flex: 1;
+
+    &-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 16px;
+
+      &-item {
+        width: 100%;
+        height: 36px;
+        border-radius: 100rem;
+      }
+
+    }
+  }
+
+  &__scroll {
+
+
+    &-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+
+      &-up,
+      &-down {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border: 0;
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &:hover {
+          background-color: #ddd;
+          border-radius: 100rem !important;
+        }
+      }
+    }
+  }
+
+  &__button {
+    &-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      &-btn {
+        border: 0;
+        padding: 4px !important;
+      }
+    }
+  }
+}

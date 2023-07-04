@@ -1,0 +1,40 @@
+@import "/styles/css/variables.scss";
+
+.main-layout {
+  margin-top: $header-height;
+  margin-bottom: 16px;
+  height: 100%;
+  width: 100%;
+  padding: 0px 15px;
+
+  @media screen and (max-width: $sm) {
+    padding: 0;
+  }
+
+  &__content {
+    overflow: hidden;
+    height: 100%;
+
+    & {
+      @media screen and (max-width: $sm) {
+        display: block;
+      }
+    }
+
+    &-chat {
+      @media screen and (max-width: $sm) {
+        display: none;
+      }
+    }
+
+    &-option {
+      @media screen and (max-width: $sm) {
+        display: none;
+      }
+    }
+  }
+
+  [class*="ant-spin-container ant-spin-blur"] {
+    flex-direction: column !important;
+  }
+}

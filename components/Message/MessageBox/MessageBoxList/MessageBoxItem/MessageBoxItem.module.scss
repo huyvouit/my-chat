@@ -1,0 +1,447 @@
+@import '/styles/css/variables.scss';
+
+.message-box-item {
+  width: 100%;
+  margin-top: 10px;
+  z-index: 100;
+
+  &--small {
+    margin-top: 5px;
+
+    .message-box-item {
+      &__message-content {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &--info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    font-size: 12px;
+    color: $dark-gray-color-2;
+    padding: 8px 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    height: fit-content;
+
+    &:hover {
+      .message-box-item {
+        &__message {
+          &-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+
+            &-forward,
+            &-option {
+              padding: 2px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              z-index: 1;
+              cursor: pointer;
+              transform: scaleX(-1);
+
+              &:hover {
+                background-color: #efefef;
+                border-radius: 100rem;
+              }
+            }
+
+            &-option {
+              padding: 4px;
+            }
+          }
+        }
+      }
+    }
+
+    &--mine {
+      flex-direction: row-reverse;
+
+      &:hover {
+        .message-box-item {
+          &__message-actions {
+            flex-direction: row-reverse;
+
+            &-forward {
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+
+      .message-box-item {
+        &__content {
+          align-items: flex-end;
+        }
+
+        &__name {
+          flex-direction: row-reverse;
+        }
+
+        &__message {
+          flex-direction: row-reverse;
+
+          &-content {
+            background-color: $light-gray-color-4;
+            color: $dark-color;
+            border-radius: 12px 0px 12px 12px;
+          }
+
+          &-actions {
+            transform: scaleX(1);
+          }
+
+          &-replied {
+            &-content {
+              align-self: flex-end;
+              border-radius: 12px 0px 12px 12px;
+            }
+
+            &-text {
+              flex-direction: row-reverse;
+            }
+
+            &--sub {
+              background-color: $light-gray-color-4 !important;
+              color: $dark-color;
+              border-radius: 12px 0px 12px 12px;
+            }
+
+            &-file {
+              &--img {
+                align-self: flex-end;
+                cursor: pointer;
+                opacity: 0.6;
+
+                img {
+                  border-radius: $border-radius;
+                  width: 120px;
+                  height: 120px;
+                  object-fit: cover;
+                }
+              }
+
+              &--attachment {
+                align-self: flex-end;
+                border-radius: 12px 0px 12px 12px;
+              }
+            }
+          }
+
+          &-file {
+            &--attachment {
+              background-color: $light-gray-color-4;
+              border-radius: 12px 0px 12px 12px;
+
+              .attachment {
+                &__name {
+                  &-text {
+                    color: $dark-color !important;
+                    width: 100%;
+                    font-weight: bold;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &__file {
+          background-color: #e2ffef;
+        }
+      }
+    }
+
+    @media screen and (max-width: $md) {
+      max-width: 100%;
+    }
+  }
+
+  &__avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 100rem;
+    background-color: #ddd;
+
+    &--none {
+      background-color: transparent;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: fit-content;
+  }
+
+  &__name {
+    font-size: 12px;
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__message {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    width: 100%;
+
+    &-actions {
+      display: none;
+    }
+
+    &-replied {
+      position: relative;
+      width: 100%;
+
+      &-wrapper {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin-bottom: -20px;
+      }
+
+      &-content {
+        position: relative;
+        background-color: rgba(34, 139, 34, 0.1) !important;
+        color: #000;
+        padding: 10px 12px 24px 12px;
+        border-radius: 12px 12px 12px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-self: flex-start;
+        max-width: 90%;
+        text-align: left;
+        word-wrap: break-word;
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+        word-break: break-word;
+        height: fit-content;
+        cursor: pointer;
+      }
+
+      &-text {
+        position: relative;
+        bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        max-width: 100%;
+      }
+
+      &--sub {
+        background-color: $primary-color !important;
+        color: $white-color;
+        padding: 10px 12px;
+        border-radius: 0px 12px 12px 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 80%;
+        text-align: left;
+        word-wrap: break-word;
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+
+      &-file {
+        &--img {
+          cursor: pointer;
+          opacity: 0.6;
+
+          img {
+            border-radius: $border-radius;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+          }
+        }
+
+        &--attachment {
+          position: relative;
+          background-color: rgba(34, 139, 34, 0.1) !important;
+          color: #000;
+          padding: 10px 12px 24px 12px;
+          border-radius: 12px 12px 12px 0px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          align-self: flex-start;
+          max-width: 90%;
+          height: fit-content;
+          cursor: pointer;
+          gap: 8px;
+
+          .attachment {
+            &__icon {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            &__name {
+              font-style: italic;
+              color: $dark-color;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &-content {
+      background-color: $primary-color;
+      color: $white-color;
+      padding: 10px 12px;
+      border-radius: 0px 12px 12px 12px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 80%;
+      text-align: left;
+      word-wrap: break-word;
+      white-space: -moz-pre-wrap;
+      white-space: pre-wrap;
+      word-break: break-word;
+
+      &--remove {
+        background-color: $white-color;
+        border-radius: 20px;
+        border: 1px solid $light-gray-color-4;
+        font-style: italic;
+        padding: 9px 12px;
+      }
+    }
+
+    &-file {
+      &--img {
+        cursor: pointer;
+
+        img {
+          border-radius: $border-radius;
+          width: 200px;
+          height: auto;
+        }
+      }
+
+      &--attachment {
+        background-color: $light-gray-color-4;
+        padding: 10px 12px;
+        border-radius: 0px 12px 12px 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        max-width: 80%;
+        text-align: left;
+        gap: 8px;
+        cursor: pointer;
+
+        .attachment {
+          &__icon {
+            display: flex;
+            align-items: center;
+            background-color: #fefefe;
+            justify-content: center;
+            padding: 7px;
+            border-radius: 100rem;
+          }
+
+          &__name {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &-text {
+              color: $dark-color;
+              width: 100%;
+              font-weight: bold;
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  &__image {
+    cursor: pointer;
+
+    img {
+      border-radius: $border-radius;
+      width: 200px;
+      height: auto;
+    }
+  }
+
+  &__file {
+    &-name {
+      word-break: break-word;
+      white-space: pre-wrap;
+      color: black;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      cursor: pointer;
+      margin-right: 10px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &-icon {
+      padding: 5px;
+      border-radius: 100%;
+      background-color: white;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+    gap: 10px;
+    font-size: 14px;
+    color: #ddd;
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+}

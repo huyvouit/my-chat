@@ -1,0 +1,58 @@
+@import '/styles/css/variables.scss';
+
+.my-textarea {
+  &--not-count {
+    width: 100% !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent !important;
+      margin: 5px 0px !important;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px !important;
+    }
+  }
+
+  textarea {
+    width: 100% !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent !important;
+      margin-bottom: 7px !important;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px !important;
+    }
+  }
+
+  &--border {
+    &[class*="my-textarea--not-count"] {
+      border: solid 1px #c8cbcd;
+    }
+
+    &:not([class*="my-textarea--not-count"]) {
+      textarea {
+        border: solid 1px #c8cbcd;
+      }
+    }
+  }
+
+
+  &--no-border {
+    border: none !important;
+
+    textarea {
+      border: none !important;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import '/styles/css/variables.scss';
+
+.not-found {
+  min-height: 100vh;
+  display: flex;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    text-align: center;
+
+    &-title {
+      font-size: 24px;
+      font-weight: 500;
+      color: $dark-gray-color;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    color: $primary-color;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
